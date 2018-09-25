@@ -1,0 +1,69 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+int size;
+
+/*
+double weighted_mean(int array_1[size], int array_2[size]){
+    int z;
+  
+    int sum = 0;
+    int total_weight = 0;
+    double wmean;
+    
+    for(int i = 0; i < 5; i++){
+        
+            sum += X[i] * W[i];
+        
+        }
+    
+    for(int k = 0; k < 5; k++){
+        
+        total_weight += W[k];
+        
+    }
+    wmean = sum/total_weight;
+    return wmean;
+    
+}
+
+*/
+
+
+int main() {
+    
+    double sum = 0;
+    double total_weight = 0;
+    double wmean;
+    
+    cin>>size;
+    
+    vector<int> R(size);
+    vector<int> W(size);
+    
+    for(int i = 0; i < size; i++){
+        cin>>R[i];
+    }
+     for(int j = 0; j < size; j++){
+        cin >> W[j];
+    }
+    
+    
+    for(int i = 0; i < size; i++){        
+            sum += R[i] * W[i];       
+        }
+    
+    for(int k = 0; k < size; k++){   
+        total_weight += W[k];       
+    }
+    
+    wmean = sum/total_weight;
+    cout << fixed << setprecision(1) << wmean;  
+
+    return 0;
+}
