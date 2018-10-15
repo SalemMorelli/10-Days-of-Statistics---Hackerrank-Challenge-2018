@@ -5,10 +5,8 @@
 #include <algorithm>
 using namespace std;
 
-int median(vector<int> W, int size, int start){
-      
+int median(vector<int> W, int size, int start){   
     int med; 
-    
     //when count is odd
     if(size % 2 != 0){  
         med = W[size/2 + start];  
