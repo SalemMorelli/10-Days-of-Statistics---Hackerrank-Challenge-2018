@@ -15,8 +15,7 @@ int median(vector<int> W, int size, int start){
     }
     else{
         med = (W[(size/2) + start] + W[(size/2 - 1) + start])/2 ; 
-    }
-    
+    }    
     return med;
 }
 
@@ -31,13 +30,13 @@ int main() {
         cin >> W[i];
     }
     sort(W.begin(), W.end());
-    
- 
-    
+  
     cout<<median(W, x/2, 0)<<endl;        //Q1
     cout<<median(W, x, 0)<<endl;          //Q2
-//Special condition for Q3   
+    
+//SPECIAL CONDITION for Q3   
 //The starting position for the upper half is different depending on whether size is even or odd
+
     if(x%2 == 0){
         cout<<median(W, x/2, x/2)<<endl;
     }
