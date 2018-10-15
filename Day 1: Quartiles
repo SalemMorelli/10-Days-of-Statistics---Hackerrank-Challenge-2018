@@ -42,8 +42,7 @@ int main() {
     }
     else{
     cout<<median(W, x/2, x/2+1)<<endl;     
-    }
-      
+    }     
     return 0;
 }
 
