@@ -18,4 +18,6 @@ Answer
 
 Explanation
 Possibilities are RRB, BRR, RBR. Therefore:-
- (4C1 * 5C1 * 4C1) + (3C1 * 5C1 * 4C1) + (4C1 * 4C1 * 4C1) = 204
+(4C1 * 5C1 * 4C1) + (3C1 * 5C1 * 4C1) + (4C1 * 4C1 * 4C1) = 204
+Total possibilities is (7 balls in X) * (8 balls in Y) * (9 balls in Z) = 504
+Answer = 204/504 = 17/42
