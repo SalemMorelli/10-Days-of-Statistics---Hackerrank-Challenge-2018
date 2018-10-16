@@ -1,0 +1,14 @@
+Objective 
+In this challenge, we practice calculating probability. Check out the Tutorial tab for a breakdown of probability fundamentals! 
+
+
+Task 
+In a single toss of  fair (evenly-weighted) six-sided dice, find the probability that their sum will be at most .
+
+Answer 
+5/6 
+
+Explanation
+To get a sum of atmost 9 the options are:-
+(5,4) (4,5) (5,5) (6,6) (5,6) (6,5) (6,4) (4,6) (3,6) (6,3) = 10 possibilities
+Therefore, (1/6 * 1/6) * 10 = 5/6
