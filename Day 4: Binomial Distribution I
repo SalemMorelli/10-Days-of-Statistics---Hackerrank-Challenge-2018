@@ -11,7 +11,7 @@ double factorial(int x, int result = 1) {
 }
 
 int main() {
-    int s, f, l, m;
+    double s, f, l, m;
     cin >> l;
     cin >> m;
     
@@ -24,6 +24,8 @@ int main() {
     s = l/l+m;
     //probability of failure
     f = 1-s;
+    
+    cout<< m<<endl<<l<<endl;
     
     //for loop starts here
     
