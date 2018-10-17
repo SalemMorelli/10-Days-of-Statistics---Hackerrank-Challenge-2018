@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    int x, y;
+    cin >> x;
+    cin >> y;
+    
+    int sum = 0;
+    
+    for(int i = 3; i < 6; i++){
+        
+        sum += 
+        
+    }
+    
+    cout <<fixed<<setprecision(3)<< sum <<endl;
+    
+    return 0;
+}
