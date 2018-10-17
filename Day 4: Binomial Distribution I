@@ -3,23 +3,55 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <iomanip>
 using namespace std;
 
+double factorial(int x, int result = 1) {
+  if (x == 1) return result; else return factorial(x - 1, x * result);
+}
 
 int main() {
-    int x, y;
-    cin >> x;
-    cin >> y;
+    int s, f, l, m;
+    cin >> l;
+    cin >> m;
     
     int sum = 0;
+    //number of trials
+    int n = 6;
+    //number of successes
+    int x = 3;   
+    //probability of success
+    s = l/l+m;
+    //probability of failure
+    f = 1-s;
     
-    for(int i = 3; i < 6; i++){
+    //for loop starts here
+    
+    
+    //the factorial part
+    double f1 = factorial(6);
+    double f2 = factorial(3);
+    double f3 = factorial(6-3);
+    
+    double f4 = f1/(f2*f3);
+        
+    
+    //the power part
+    double p = pow(s,x) * pow(f, n-x);
+    
+    
+    //multiplication of both factorial and power part
+    
+    double ans = f4*p;
+    
+    
+ /*   for(int i = 3; i < 6; i++){
         
         sum += 
         
-    }
+    } */
     
-    cout <<fixed<<setprecision(3)<< sum <<endl;
+    cout <<fixed<<setprecision(3)<< ans <<endl;
     
     return 0;
 }
