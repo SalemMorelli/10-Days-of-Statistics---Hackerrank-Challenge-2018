@@ -1,7 +1,7 @@
-# Useful Information:-
+# Math Notes
 
 
-## Combinations and Permutations:-
+### Combinations and Permutations:-
 Mathematically, the different terms usually mean
 1. Permutations: Number of ways in which n different things can be arranged among themselves (n!)
 2. Combinations: Number of ways in which r things can be chosen from n different things (C(n,r))
