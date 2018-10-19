@@ -1,1 +1,26 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+include <iomanip>
+using namespace std;
+
+
+int main() {
+    int n, d, first_defect, prob;
+    
+    cin >> n;
+    cin >> d;
+    cin >> first_defect;
+    
+    //probability that machine produces defective products
+    prob = n/d;
+    
+    
+    
+    
+    cout <<fixed<<setprecision(3)<<endl; 
+    return 0;
+}
 
