@@ -1,1 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double max_w, no_boxes, mean_w, sdev, ans;
+    
+    cin >> max_w;
+    cin >> no_boxes;
+    cin >> mean_w;
+    cin >> sdev;
+    
+    double sample_avg = no_boxes * mean_w;
+    double sample_sdev = sqrt(no_boxes) * sdev;
+    
+    ans = 0.5*(1 + erf((max_w-sample_avg)/(sample_sdev*sqrt(2)))); 
+   
+    cout<<fixed<<setprecision(4)<<ans<<endl;   
+    return 0;
+}
 
