@@ -3,12 +3,12 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
-include <iomanip>
+#include <iomanip>
 using namespace std;
 
-
 int main() {
-    int n, d, first_defect, prob;
+    double n, d, first_defect;
+    double p, prob, fail;
     
     cin >> n;
     cin >> d;
@@ -16,11 +16,11 @@ int main() {
     
     //probability that machine produces defective products
     prob = n/d;
-    
-    
-    
-    
-    cout <<fixed<<setprecision(3)<<endl; 
+    fail = 1-prob;
+
+    p = pow(fail, first_defect-1) * pow(prob, 1);
+ 
+    cout <<fixed<<setprecision(3)<<p<<endl; 
     return 0;
 }
 
