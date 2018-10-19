@@ -7,8 +7,7 @@
 using namespace std;
 
 int main() {
-    double n, d, first_defect;
-    double p, prob, fail;
+    double n, d, first_defect, p, prob, fail;
     
     cin >> n;
     cin >> d;
