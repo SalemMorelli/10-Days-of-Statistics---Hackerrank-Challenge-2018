@@ -10,7 +10,7 @@ Mathematically, the different terms usually mean
 2. Combinations: Number of ways in which r things can be chosen from n different things (C(n,r))
 3. Combination with order: Number of ways in which r things can be chosen from n different things, order of choosing being important (P(n,r))
 
-
+-------------------------------------------------------------------------------------------------------------------------------------
 ### Binomial Distribution:-
 Binomial distribution
 Random number distribution that produces integers according to a binomial discrete distribution, which is described by the following probability mass function:
@@ -45,3 +45,15 @@ The probability of failure of 1 trial q, where q=1-p.
 b*(x,n,p) is the negative binomial probability, meaning the probability of having x-1 successes after n-1 trials and having x successes after n trials. 
 
 Note: Recall that nCr. For further review, see the Combinations and Permutations Tutorial. 
+
+---------------------------------------------------------------------------------------------------------------------------------------
+### Poisson Experiment
+A Poisson experiment is a statistical experiment that has the following properties: 
+
+
+The outcome of each trial is either success or failure.
+The average number of successes  that occurs in a specified region is known.
+The probability that a success will occur is proportional to the size of the region.
+The probability that a success will occur in an extremely small region is virtually zero. 
+
+---------------------------------------------------------------------------------------------------------------------------------------
