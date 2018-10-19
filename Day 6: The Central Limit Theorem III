@@ -1,1 +1,27 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double sample, prob, mean, sdev, A, B, z_score;
+    
+    cin >> sample;
+    cin >> mean;
+    cin >> sdev;
+    cin >> prob;
+    cin >> z_score;
+    
+    A = mean - z_score *(sdev/sqrt(sample));
+    B = mean + z_score *(sdev/sqrt(sample));
+  
+    cout<<fixed<<setprecision(2)<<A<<endl;   
+    cout<<fixed<<setprecision(2)<<B<<endl;  
+    return 0;
+}
+
+
 
