@@ -1,1 +1,26 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double no_ticks, no_students, mean, sdev, ans;
+    
+    cin >> no_ticks;
+    cin >> no_students;
+    cin >> mean;
+    cin >> sdev;
+    
+    double sample_avg = no_students * mean;
+    double sample_sdev = sqrt(no_students) * sdev;
+    
+    ans = 0.5*(1 + erf((no_ticks-sample_avg)/(sample_sdev*sqrt(2)))); 
+   
+    cout<<fixed<<setprecision(4)<<ans<<endl;   
+    return 0;
+}
+
 
