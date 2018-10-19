@@ -1,1 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
 
+
+int main() {
+    double mean, sdev, score_1, score_2, ans_1, ans_2, ans_3;
+    double PI = 3.14159;
+    double e = 2.71828;
+    
+    cin >> mean;
+    cin >> sdev;
+    cin >> score_1;
+    cin >> score_2;
+    
+    //Using the CDF for a function with Normal distribution for all parts
+    //the percentage of students having > 80
+    ans_1 = 1 - 0.5*(1 + erf((score_1-mean)/(sdev*sqrt(2))));    
+    //the percentage of students having >= 60
+    ans_2 = 1 - (0.5*(1 + erf((score_2-mean)/(sdev*sqrt(2)))));
+    //the percentage of students having < 60
+    ans_3 =(0.5*(1 + erf((score_2-mean)/(sdev*sqrt(2)))));
+          
+    cout<<fixed<<setprecision(2)<<ans_1 * 100<<endl;
+    cout<<fixed<<setprecision(2)<<ans_2 * 100<<endl;
+    cout<<fixed<<setprecision(2)<<ans_3 * 100<<endl;
+    return 0;
+}
