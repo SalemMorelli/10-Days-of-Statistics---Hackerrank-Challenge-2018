@@ -1,1 +1,38 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
 
+double factorial(int x, int result = 1) {
+  if (x == 1) return result; 
+  else if (x ==0) return 1;
+  else return factorial(x - 1, x * result);
+}
+
+int main() {
+    double mean_x, mean_y, A, B, ans_A, ans_B;
+    double expected_A, expected_B = 0;
+    double e = 2.71828;
+    
+    cin >> mean_x;
+    cin >> mean_y;
+    
+    for(int i = 3; i < 10; i++){
+    ans_A = (pow(i, mean_x)*pow(e, -mean_x))/factorial(i);
+    ans_B = (pow(i, mean_y)*pow(e, -mean_y))/factorial(i);
+    
+    A = 160 + 40*pow(i,2);
+    B = 128 + 40*pow(i,2);
+    
+    expected_A += (ans_A * A);
+    expected_B += (ans_B * B);
+    }
+    
+    cout<<fixed<<setprecision(3)<<expected_A<<endl;
+    cout<<fixed<<setprecision(3)<<expected_B<<endl;
+    
+    return 0;
+}
