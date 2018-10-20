@@ -1,1 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    int size;
+    double ans;
+    double sum = 0;
+    double mean_X = 6.73;
+    double sdev_X = 2.39251;
+    double mean_Y = 37.8;
+    double sdev_Y = 55.1993;
+    
+    cin >> size;
+    vector<double> set_X(size);
+    vector<double> set_Y(size);
+    
+    for(int i = 0; i < size; i++){
+    cin >> set_X[i];
+    }
+    for(int i = 0; i < size; i++){
+    cin >> set_Y[i];
+    }
+    for(int i = 0; i < size; i++){
+    sum += ((set_X[i] - mean_X)*(set_Y[i]-mean_Y))/(size*sdev_X*sdev_Y);
+    }   
+    
+    cout<<fixed<<setprecision(3)<<sum<<endl;
+    return 0;
+}
 
