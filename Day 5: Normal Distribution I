@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    double mean, sdev, p, hours_1, hours_2, hours_3, ans_1, ans_2;
+    double PI = 3.14159;
+    double e = 2.71828;
+    
+    cin >> mean;
+    cin >> sdev;
+    cin >> hours_1;
+    cin >> hours_2;
+    cin >> hours_3;
+    
+    //Using the CDF for a function with Normal distribution for both parts
+    //the probability that a car can be assembled in less than 19.5 hours
+    ans_1 = 0.5*(1 + erf((hours_1-mean)/(sdev*sqrt(2))));
+    
+    //the probability that a car can be assembled in between 20 to 22 hours
+    ans_2 = (0.5*(1 + erf((hours_3-mean)/(sdev*sqrt(2))))) - (0.5*(1 + erf((hours_2-mean)/(sdev*sqrt(2)))));
+          
+    cout<<fixed<<setprecision(3)<<ans_1<<endl;
+    cout<<fixed<<setprecision(3)<<ans_2<<endl;
+    return 0;
+}
+

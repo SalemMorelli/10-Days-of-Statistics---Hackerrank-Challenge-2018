@@ -1,0 +1,48 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    int size;
+    double ans;
+    double sum, sum_X, sum_Y, x, y = 0;
+    double mean_X, sdev_X, mean_Y, sdev_Y;
+    
+    cin >> size;
+    vector<double> set_X(size);
+    vector<double> set_Y(size);
+    
+    for(int i = 0; i < size; i++){
+    cin >> set_X[i];
+    sum_X += set_X[i];
+    }
+    for(int i = 0; i < size; i++){
+    cin >> set_Y[i];
+    sum_Y += set_Y[i];
+    }
+    
+    //mean of dataset
+    mean_X = sum_X/size;
+    mean_Y = sum_Y/size;
+    //standard deviation of dataset
+    for(int i = 0; i < size; i++){
+    x += pow((set_X[i]-mean_X), 2);
+    y += pow((set_Y[i]-mean_Y), 2);
+    }
+    sdev_X = sqrt(x/size);
+    sdev_Y = sqrt(y/size);
+    
+    //pearson correlation coefficient calculation
+    for(int i = 0; i < size; i++){
+    sum += ((set_X[i] - mean_X)*(set_Y[i]-mean_Y));
+    }  
+    ans = sum/(size*sdev_X*sdev_Y);
+    
+    cout<<fixed<<setprecision(3)<<ans<<endl;
+    return 0;
+}

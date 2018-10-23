@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    double n, d, first_defect, p, prob, fail;
+    
+    cin >> n;
+    cin >> d;
+    cin >> first_defect;
+    
+    //probability that machine produces defective products
+    prob = n/d;
+    fail = 1-prob;
+
+    p = pow(fail, first_defect-1) * pow(prob, 1);
+ 
+    cout <<fixed<<setprecision(3)<<p<<endl; 
+    return 0;
+}
+

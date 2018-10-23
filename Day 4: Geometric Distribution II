@@ -1,0 +1,33 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <iomanip>
+using namespace std;
+
+
+int main() {
+    double n, d, first_defect, p, prob, fail;
+    double sum = 0;
+    
+    cin >> n;
+    cin >> d;
+    cin >> first_defect;
+    
+    //probability that machine produces defective products
+    prob = n/d;
+    fail = 1-prob;
+    
+    for(int i = 1; i <= 5; i++){
+
+    p = pow(fail, i-1) * pow(prob, 1);    
+        
+    sum += p;
+          
+    } 
+    
+    cout <<fixed<<setprecision(3)<< sum <<endl; 
+    return 0;
+}
+
