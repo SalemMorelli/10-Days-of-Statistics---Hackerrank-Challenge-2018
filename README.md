@@ -1,9 +1,5 @@
-<<<<<<< HEAD
+
 # 10-Days-of-Statistics-in-C----Hackerrank-Challenge-2018
-# MyApp
-# MyApp
-# MyApp
-"# DataCamp---R-basics" 
 =======
 # The Challenge
 10 Days of Statistics is a challenge on Hackerrank. The challenge covers the basics of statistics with levels spanning Easy to Medium.  I coded all the exercises in my core programming language C++. The questions that did not require coding have an explanation appended to them as to how the answer was derived. 
